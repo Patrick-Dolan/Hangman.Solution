@@ -30,15 +30,11 @@
 [Resource on how to build/use this template](https://www.learnhowtoprogram.com/c-and-net-part-time/test-driven-development-with-c/mstest-configuration-quick-reference)
 
 * Open the repo on your editor of choice/terminal
-* Navigate to ProjectName.Tests directory in your terminal
+* Navigate to Hangman.Tests directory in your terminal
 * Run the following command to setup testing:  
 <code>dotnet restore</code>
-* <strong>Make sure to rename ProjectName & ClassName in ProjectName.Tests to match those in the ProjectName directory tree.</strong>  
-* Rename the ProjectName in the following files for use: ProjectName in all folder its included in, Homecontroller.cs, ClassName.cs, PageName.cshtml, Program.cs, and Startup.cs.
-* Run tests by going to the test project in the terminal (ProjectName.Solution/ProjectName.Tests) and running the following command:  
+* Run tests by going to the test project in the terminal (Hangman.Solution/Hangman.Tests) and running the following command:  
 <code>dotnet test</code>  
-<br>
-* When renaming project files for new project make sure to rename all fields with "ProjectName" as the directory/file name. This includes line 13 of "ProjectName.Tests.csproj" to the names of your directories. 
 
 ## Known Bugs
 
@@ -47,10 +43,10 @@
 ## Contact Me
 
 Let me know if you run into any issues or have questions, ideas or concerns:  
-{PUT EMAIL HERE}
+dolanp1992@gmail.com
 
 ## License
 
 _MIT_
 
-Copyright (c) _date_ _author name(s)_
+Copyright (c) _2022_ _Patrick Dolan_
