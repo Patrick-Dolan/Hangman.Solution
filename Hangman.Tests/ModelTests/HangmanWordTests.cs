@@ -6,14 +6,11 @@ namespace Hangman.Tests
   [TestClass]
   public class HangmanWordTests
   {
-    // Test methods go here
+    [TestMethod]
+    public void HangmanWordConstructor_CreatesHangmanWordObject_HangmanWord()
+    {
+      HangmanWord newHangmanWord = new HangmanWord();
+      Assert.AreEqual(typeof(HangmanWord), newHangmanWord.GetType());
+    }
   }
 }
-// Example Test Method Structure
-//_________________________
-// [TestMethod]
-// public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
-// {
-//   // any necessary logic to prep for test; instantiating new classes, etc.
-//   Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
-// }
