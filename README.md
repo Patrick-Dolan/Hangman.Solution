@@ -1,8 +1,8 @@
-# {Application name here}
+# Hangman
 
-#### By _**{List of contributors}**_
+#### By _**Patrick Dolan**_
 
-#### _{Brief description of application}_
+#### _Play Hangman the word game._
 
 <!-- ## Github Pages Link
 
