@@ -21,7 +21,7 @@ namespace Hangman.Tests
     public void GetWord_FetchsAWordFromWordList_String()
     {
       HangmanWord newHangmanWord = new HangmanWord();
-      List<string> wordList = new List<string> { "Wordle", "Ghost", "Arose", "Geared" };
+      List<string> wordList = new List<string> { "wordle", "ghost", "arose", "geared" };
       bool result = true;
       Assert.AreEqual(wordList.Contains(newHangmanWord.Solution), result);
     }
@@ -29,7 +29,7 @@ namespace Hangman.Tests
     [TestMethod]
     public void GetWord_FetchsARandomWordFromWordList_String()
     {
-      List<string> wordList = new List<string> { "Wordle", "Ghost", "Arose", "Geared" };
+      List<string> wordList = new List<string> { "wordle", "ghost", "arose", "geared" };
       HashSet<string> set = new HashSet<string>();
       for (int i = 0; i < 1000; i++)
       {
@@ -42,6 +42,15 @@ namespace Hangman.Tests
       result.Sort();
       wordList.Sort();
       CollectionAssert.AreEqual(result, wordList);
+    }
+
+    [TestMethod]
+    public void CheckLetter_ReturnFalseIfLetterIsntInSolutionWord_False()
+    {
+      HangmanWord newHangmanWord = new HangmanWord();
+      string guess = "z";
+      bool result = newHangmanWord.CheckLetter(guess);
+      Assert.AreEqual(false, result);
     }
   }
 }

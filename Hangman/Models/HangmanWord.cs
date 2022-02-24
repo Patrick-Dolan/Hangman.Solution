@@ -5,7 +5,7 @@ namespace Hangman.Models
 {
   public class HangmanWord
   {
-    public static List<string> wordList = new List<string> { "Wordle", "Ghost", "Arose", "Geared" };
+    public static List<string> wordList = new List<string> { "wordle", "ghost", "arose", "geared" };
     public string Solution { get; }
 
     public HangmanWord()
@@ -16,9 +16,14 @@ namespace Hangman.Models
     public string GetWord()
     {
       Random random = new Random();
-      int number = random.Next(0, wordList.Count);
+      int number = random.Next(wordList.Count);
       string result = wordList[number];
       return result;
+    }
+
+    public bool CheckLetter(string guess)
+    {
+      return Solution.Contains(guess);
     }
   }
 }
