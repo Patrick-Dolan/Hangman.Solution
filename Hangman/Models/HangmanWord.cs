@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Hangman.Models
@@ -9,7 +10,15 @@ namespace Hangman.Models
 
     public HangmanWord()
     {
-      Solution = wordList[0];
+      Solution = this.GetWord();
+    }
+
+    public string GetWord()
+    {
+      Random random = new Random();
+      int number = random.Next(0, wordList.Count);
+      string result = wordList[number];
+      return result;
     }
   }
 }
